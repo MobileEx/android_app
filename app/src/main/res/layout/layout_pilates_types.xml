@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvPilatesHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/label_pilates_types"
+        android:textAlignment="textStart"
+        android:textColor="@color/labelDark"
+        android:textSize="18dp"
+        android:textStyle="bold"></TextView>
+
+    <LinearLayout
+        android:id="@+id/layoutAddNew"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPilatesTypesSearchInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/label_pilates_search_text"
+            android:textAlignment="textStart"
+            android:textColor="@color/labelDark"
+            android:textSize="16dp"></TextView>
+
+        <ProgressBar
+            android:id="@+id/pbTypesSelectionLoader"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:indeterminateTint="@color/labelDark" />
+
+        <LinearLayout
+            android:id="@+id/layoutSelectionItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"></LinearLayout>
+
+        <com.pilates.app.controls.RoundButton
+            android:id="@+id/rbCancelAddType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            app:buttonBg="@drawable/button_bg_gray"
+            app:textColoring="@color/labelDark"
+            app:textIsBold="true"
+            app:textLabel="Cancel" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvPilatesTypesInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/label_pilates_text"
+            android:textAlignment="textStart"
+            android:textColor="@color/labelDark"
+            android:textSize="16dp"></TextView>
+
+        <com.pilates.app.controls.RoundButton
+            android:id="@+id/rbAddPilatesType"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:clickable="true"
+            app:buttonBg="@drawable/button_bg_gray"
+            app:buttonIcon="@drawable/icon_add"
+            app:hasIcon="true"
+            app:textColoring="@color/wooPurple"
+            app:textIsBold="true"
+            app:textLabel="Add Pilates Type">
+
+        </com.pilates.app.controls.RoundButton>
+
+        <ProgressBar
+            android:id="@+id/pbTypesLoader"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:indeterminateTint="@color/labelDark" />
+
+        <LinearLayout
+            android:id="@+id/layoutItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"></LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

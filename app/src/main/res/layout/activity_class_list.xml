@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassListActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/colorPrimaryDark">
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imgIconBack"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        app:srcCompat="@drawable/icon_arrow_back" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/logo_small" />
+
+    <com.pilates.app.controls.RoundButtonGroup
+        android:id="@+id/rbgSelectListType"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="20dp"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <com.pilates.app.controls.RoundButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:buttonBg="@drawable/button_bg_gray"
+            app:selectionValue="new"
+            app:textColoring="@android:color/white"
+            app:textIsBold="true"
+            app:textLabel="Classes" />
+
+
+        <com.pilates.app.controls.RoundButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:buttonBg="@drawable/button_bg_gray"
+            app:selectionValue="trainers"
+            app:textColoring="@color/wooDarkGray"
+            app:textIsBold="true"
+            app:textLabel="Trainers"
+            tools:visibility="visible" />
+    </com.pilates.app.controls.RoundButtonGroup>
+
+    <com.pilates.app.controls.ClassList
+        android:id="@+id/clClasses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="130dp"
+        app:clMode="new">
+
+    </com.pilates.app.controls.ClassList>
+
+
+    <com.pilates.app.controls.ClassList
+        android:id="@+id/clTrainers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="130dp"
+        app:clMode="trainers">
+
+    </com.pilates.app.controls.ClassList>
+
+    <com.pilates.app.controls.screens.ClassInfoPanel
+        android:id="@+id/classInfoPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone">
+
+    </com.pilates.app.controls.screens.ClassInfoPanel>
+</FrameLayout>

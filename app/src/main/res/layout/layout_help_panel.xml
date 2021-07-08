@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/panel_white_round"
+    xmlns:wowza="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/btnClosePanel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        wowza:srcCompat="@drawable/icon_close" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        wowza:srcCompat="@drawable/icon_help" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="170dp"
+        android:text="@string/label_info"
+        android:textColor="@color/wooPurple"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/label_help_signup"
+        android:textColor="@color/labelDark"
+        android:textSize="20dp" />
+</FrameLayout>

@@ -1,0 +1,1686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="center"
+    tools:context=".LoginActivity">
+    <FrameLayout
+        android:id="@+id/frameWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="visible">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/logo_main_title" />
+            <LinearLayout
+                android:id="@+id/layoutWelcomeAction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvHaveAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/label_new_user"
+                    android:textColor="@color/wooCyan" />
+
+                <com.pilates.app.controls.RoundButton
+                    android:id="@+id/rbRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="50dp"
+                    android:clickable="true"
+                    app:buttonBg="@drawable/button_bg_cyan"
+                    app:textColoring="@color/wooLabelCyan"
+                    app:textIsBold="true"
+                    app:textLabel="@string/btn_sign_up">
+
+                </com.pilates.app.controls.RoundButton>
+
+                <TextView
+                    android:id="@+id/tvNewUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/label_new_user"
+                    android:textColor="@color/wooGreen" />
+
+                <com.pilates.app.controls.RoundButton
+                    android:id="@+id/rbLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="50dp"
+                    android:clickable="true"
+                    app:buttonBg="@drawable/button_bg_green"
+                    app:textColoring="@color/wooLabelGreen"
+                    app:textIsBold="true"
+                    app:textLabel="@string/btn_login">
+
+                </com.pilates.app.controls.RoundButton>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutWelcomeStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvThanks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/thanks_text"
+                    android:textColor="@color/wooGreen" />
+
+                <com.pilates.app.controls.RoundButton
+                    android:id="@+id/rbGetStarted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="50dp"
+                    android:clickable="true"
+                    app:buttonBg="@drawable/button_bg_green"
+                    app:textColoring="@color/wooLabelGreen"
+                    app:textLabel="@string/btn_get_started" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/rbRegisterTrainer"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/label_instructor"
+                android:textColor="@android:color/white" />
+
+            <com.pilates.app.controls.RoundButton
+                android:id="@+id/rbRegisterTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/rbLearnMore"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="50dp"
+                app:buttonBg="@drawable/button_bg_purple"
+                app:textColoring="@android:color/white"
+                app:textLabel="@string/btn_register_trainer" />
+
+            <com.pilates.app.controls.RoundButton
+                android:id="@+id/rbLearnMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="10dp"
+                app:buttonBg="@drawable/button_bg_purple"
+                app:textColoring="@android:color/white"
+                android:layout_above="@id/tvTerms"
+                app:textLabel="@string/btn_learn_more" />
+            <TextView
+                android:id="@+id/tvTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textAlignment="center"
+                android:text="@string/label_terms"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameLearnMore"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgLogoLM"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/logo_main_title" />
+
+        <ImageView
+            android:id="@+id/imgIconBackLM"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            app:srcCompat="@drawable/icon_arrow_back" />
+
+        <FrameLayout
+            android:id="@+id/frameLMBot"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/tvInfo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/label_terms"
+                android:textColor="@color/labelFaded" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutLMMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="190dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical"
+            tools:visibility="gone">
+
+            <com.pilates.app.controls.HugeButton
+                android:id="@+id/hbHow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hugeBG="@drawable/huge_button_bg_weird_purple"
+                app:hugeDescription="Learn how WooBody works, whether you’re a Trainee or Certified Pilates Instrcutor."
+                app:hugeIcon="@drawable/icon_user_cog"
+                app:hugeTextColoring="@android:color/white"
+                app:hugeTitle="How?"></com.pilates.app.controls.HugeButton>
+
+            <com.pilates.app.controls.HugeButton
+                android:id="@+id/hbWhy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:hugeBG="@drawable/huge_button_bg_weird_purple"
+                app:hugeDescription="Why choose us for your Pilates platform and what great services we can offer."
+                app:hugeIcon="@drawable/icon_tab_medal"
+                app:hugeTextColoring="@android:color/white"
+                app:hugeTitle="Why?">
+
+            </com.pilates.app.controls.HugeButton>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/svLMContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="170dp"
+            android:layout_marginBottom="50dp"
+            android:background="@android:color/white"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgLMIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="60dp"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/icon_user_cog_purple" />
+
+                <TextView
+                    android:id="@+id/tvLMTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Info title"
+                    android:textColor="@color/wooPurple"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/tvLMText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Info title"
+                    android:textColor="@color/labelDark"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameScreens"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="140dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/screen_login"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/tvSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/label_skip"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat"></TextView>
+
+        <ImageView
+            android:id="@+id/imgLogoScreens"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:adjustViewBounds="true"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/logo_main" />
+
+        <ImageView
+            android:id="@+id/imgIconBack"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            app:srcCompat="@drawable/icon_arrow_back" />
+
+        <FrameLayout
+            android:id="@+id/frameLowerSocial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="230dp"
+            android:background="@color/wooGray"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvTerms2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/label_terms"
+                android:textColor="@color/labelFaded" />
+
+            <LinearLayout
+                android:id="@+id/layoutSocial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="60dp"
+                android:orientation="vertical"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvSocial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/label_social"
+                    android:textAlignment="center"
+                    android:textColor="@color/labelFaded"
+                    android:textSize="14dp"
+                    android:textStyle="bold"></TextView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgFbLogin"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/icon_fb" />
+
+                    <ImageView
+                        android:id="@+id/imgGoogleLogin"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/icon_google" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLowerSteps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="230dp"
+            android:background="@color/wooGray"
+            tools:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/label_info"
+                android:textColor="@color/labelFaded" />
+
+            <LinearLayout
+                android:id="@+id/layoutSteps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="60dp"
+                android:orientation="horizontal"
+                tools:visibility="visible">
+
+
+                <TextView
+                    android:id="@+id/tvStep1"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/bullet_bg_faded" />
+
+                <TextView
+                    android:id="@+id/tvStep2"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bullet_bg_faded" />
+
+                <TextView
+                    android:id="@+id/tvStep3"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bullet_bg_faded" />
+
+                <TextView
+                    android:id="@+id/tvStep4"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bullet_bg_faded" />
+
+                <TextView
+                    android:id="@+id/tvStep5"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bullet_bg_faded" />
+
+                <TextView
+                    android:id="@+id/tvStep6"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bullet_bg_faded" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/panel_white_round"
+            tools:visibility="visible">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/layoutLogin"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical"
+                    tools:visibility="gone">
+
+
+                    <TextView
+                        android:id="@+id/tvLoginHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:text="@string/label_login_title"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/labelDark"
+                        android:textSize="20dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/label_email"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/labelDark"
+                        android:textSize="12dp"></TextView>
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:textSize="14dp"></EditText>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_password"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="12dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/tvForgotPass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_forgot_pass"
+                            android:textAlignment="textEnd"
+                            android:textColor="@color/wooGreen"
+                            android:textSize="12dp"></TextView>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textSize="14dp"></EditText>
+
+                    <TextView
+                        android:id="@+id/tvErrorMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/label_email"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/wooError"
+                        android:textSize="12dp"></TextView>
+
+                    <com.pilates.app.controls.RoundButton
+                        android:id="@+id/rbContinue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="0dp"
+                        android:clickable="true"
+                        app:buttonBg="@drawable/button_bg_green"
+                        app:textColoring="@color/wooLabelGreen"
+                        app:textIsBold="true"
+                        app:textLabel="@string/btn_continue">
+
+                    </com.pilates.app.controls.RoundButton>
+
+                </LinearLayout>
+
+            </ScrollView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/panel_white_round"
+            tools:visibility="gone">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/layoutSignupForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/layoutTraineeComplete"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <ImageView
+                            android:id="@+id/imageView22"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="50dp"
+                            android:adjustViewBounds="true"
+                            app:srcCompat="@drawable/user_complete" />
+
+                        <TextView
+                            android:id="@+id/tvTraineeCompleteTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/label_basic_complete"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="24dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/tvTraineeCompleteSubtitle"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/label_basic_thanks"
+                            android:textAlignment="center"
+                            android:textColor="@color/labelDark"
+                            android:textSize="14dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/tvTraineeCompleteSubtitle2"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="60dp"
+                            android:text="@string/label_trainee_setup"
+                            android:textAlignment="center"
+                            android:textColor="@color/labelDark"
+                            android:textSize="12dp"></TextView>
+                    </LinearLayout>
+
+                    <com.pilates.app.controls.screens.InviteDiscountSetup
+                        android:id="@+id/layoutTraineeInstructor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical">
+
+                    </com.pilates.app.controls.screens.InviteDiscountSetup>
+
+                    <LinearLayout
+                        android:id="@+id/layoutTraineeGoals"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/tvTraineeGoalsHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/label_goals"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="18dp"
+                            android:textStyle="bold"></TextView>
+
+                        <com.pilates.app.controls.RoundButtonGroup
+                            android:id="@+id/rbgSelectTraineeGoals"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:multiSelect="true">
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="WEIGHT_LOSS"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="WEIGHT LOSS" />
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="FLEXIBILITY"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="FLEXIBILITY" />
+
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="BACK_PAIN"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="BACK PAIN" />
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="NECK_PAIN"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="POSTURE PROBLEM" />
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="GOOD_SHAPE"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="GOOD SHAPE" />
+
+                        </com.pilates.app.controls.RoundButtonGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutTraineeExpLevel"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/tvTraineeExpLevelHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/label_exp_level"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="18dp"
+                            android:textStyle="bold"></TextView>
+
+                        <com.pilates.app.controls.RoundButtonGroup
+                            android:id="@+id/rbgSelectTraineeExpLevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="BEGINNER"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="BEGINNER" />
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="ADVANCED"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="INTERMEDIATE" />
+
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="EXPERIENCED"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="ADVANCED" />
+
+                        </com.pilates.app.controls.RoundButtonGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutComplete"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="50dp"
+                            android:adjustViewBounds="true"
+                            app:srcCompat="@drawable/icon_complete" />
+
+                        <TextView
+                            android:id="@+id/tvCompleteTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/label_complete"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="24dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/tvCompleteSubtitle"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/label_complete_text"
+                            android:textAlignment="center"
+                            android:textColor="@color/labelDark"
+                            android:textSize="14dp"></TextView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutConfirmation"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/tvConfirmationHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/label_confirmation"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="18dp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/tvConfirmationInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/label_confirm_text"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="16dp"></TextView>
+
+
+                    </LinearLayout>
+
+                    <com.pilates.app.controls.screens.PilatesTypesSetup
+                        android:id="@+id/layoutPilatesTypes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+                    </com.pilates.app.controls.screens.PilatesTypesSetup>
+
+                    <com.pilates.app.controls.screens.CertificatesSetup
+                        android:id="@+id/layoutCertificates"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+                    </com.pilates.app.controls.screens.CertificatesSetup>
+
+                    <com.pilates.app.controls.screens.GallerySetup
+                        android:id="@+id/layoutGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                    </com.pilates.app.controls.screens.GallerySetup>
+
+                    <com.pilates.app.controls.screens.AvatarSetup
+                        android:id="@+id/layoutProfilePic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                    </com.pilates.app.controls.screens.AvatarSetup>
+
+                    <LinearLayout
+                        android:id="@+id/layoutAboutMeStep"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/tvAboutMeHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/label_about_me"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="18dp"
+                            android:textStyle="bold"></TextView>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/profileAboutMe"
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:layout_marginTop="0dp"
+                                android:gravity="top"
+                                android:hint="@string/hint_about_me"
+                                android:inputType="textMultiLine"
+                                android:textAlignment="gravity"
+                                android:textSize="14dp"></EditText>
+
+                            <TextView
+                                android:id="@+id/tvAboutMeCharacters"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="0dp"
+                                android:text="@string/label_about_me"
+                                android:textAlignment="textEnd"
+                                android:textColor="@color/labelDark"
+                                android:textSize="12dp"></TextView>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutCompleteBasic"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="50dp"
+                            android:adjustViewBounds="true"
+                            app:srcCompat="@drawable/user_complete" />
+
+                        <TextView
+                            android:id="@+id/tvCompleteBasicTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/label_basic_complete"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="24dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/tvCompleteBasicSubtitle"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/label_basic_thanks"
+                            android:textAlignment="center"
+                            android:textColor="@color/labelDark"
+                            android:textSize="14dp"></TextView>
+
+                        <TextView
+                            android:id="@+id/tvCompleteBasicSubtitle2"
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="60dp"
+                            android:text="@string/label_basic_start"
+                            android:textAlignment="center"
+                            android:textColor="@color/wooPurple"
+                            android:textSize="14dp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutAccountDetails"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/tvAccountHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/label_account_details"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="20dp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/tvAccountCountry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/label_country"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="12dp"></TextView>
+
+                        <Spinner
+                            android:id="@+id/spnCountry"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="10dp" />
+
+                        <TextView
+                            android:id="@+id/tvAccountPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_phone"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="12dp"></TextView>
+
+                        <EditText
+                            android:id="@+id/accountPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Phone"
+                            android:inputType="phone"
+                            android:textSize="14dp"></EditText>
+
+                        <TextView
+                            android:id="@+id/tvAccountPostCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_post_code"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="12dp"></TextView>
+
+                        <EditText
+                            android:id="@+id/accountPostCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Enter your postcode"
+                            android:inputType="text"
+                            android:textSize="14dp"></EditText>
+
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_address"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="12dp"></TextView>
+
+                        <EditText
+                            android:id="@+id/accountAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Enter your address"
+                            android:inputType="text"
+                            android:textSize="14dp"></EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutTimeOfDay"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/tvTODHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/label_tod"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="18dp"
+                            android:textStyle="bold"></TextView>
+
+                        <com.pilates.app.controls.RoundButtonGroup
+                            android:id="@+id/rbgSelectTimeOfDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:multiSelect="true">
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="MORNING"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="MORNING" />
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="LUNCHTIME"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="LUNCHTIME" />
+
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="AFTERNOON"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="AFTERNOON" />
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="EVENING"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="EVENING" />
+                        </com.pilates.app.controls.RoundButtonGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutClassDurations"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/tvCDHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/label_durations"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="18dp"
+                            android:textStyle="bold"></TextView>
+
+                        <com.pilates.app.controls.RoundButtonGroup
+                            android:id="@+id/rbgSelectClassDurations"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:multiSelect="true">
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="15"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="15 MINUTES" />
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="30"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="30 MINUTES" />
+
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="45"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="45 MINUTES" />
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="60"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="60 MINUTES" />
+                        </com.pilates.app.controls.RoundButtonGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutTimesPerWeekStep"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/tvTPWHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/label_times_per_week"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="18dp"
+                            android:textStyle="bold"></TextView>
+
+                        <com.pilates.app.controls.RoundButtonGroup
+                            android:id="@+id/rbgSelectTimesPerWeek"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="1"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="1 OR 2" />
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="3"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="3 OR 4" />
+
+
+                            <com.pilates.app.controls.RoundButton
+                                android:layout_width="300dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="0dp"
+                                android:clickable="true"
+                                app:buttonBg="@drawable/button_bg_gray"
+                                app:selectionValue="5"
+                                app:textColoring="@color/wooDarkGray"
+                                app:textIsBold="true"
+                                app:textLabel="MORE THAN 4" />
+
+                        </com.pilates.app.controls.RoundButtonGroup>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layoutExperienceStep"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/tvExpHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/label_exp"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="18dp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/tvExpYears"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/label_year"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="12dp"></TextView>
+
+                        <Spinner
+                            android:id="@+id/spnYears"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="10dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutSignup"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/tvSignupHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/label_signup_title"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="20dp"
+                            android:textStyle="bold"></TextView>
+
+                        <TextView
+                            android:id="@+id/tvSignupName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/label_name"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="12dp"></TextView>
+
+                        <EditText
+                            android:id="@+id/signupName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Name"
+                            android:inputType="textEmailAddress"
+                            android:textSize="14dp"></EditText>
+
+                        <TextView
+                            android:id="@+id/tvSignupEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/label_email"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="12dp"></TextView>
+
+                        <EditText
+                            android:id="@+id/signupEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:textSize="14dp"></EditText>
+
+                        <TextView
+                            android:id="@+id/tvSignupPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_password"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="12dp"></TextView>
+
+                        <EditText
+                            android:id="@+id/signupPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:textSize="14dp"></EditText>
+
+                        <TextView
+                            android:id="@+id/tvSignupConfirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_confirm_password"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="12dp"></TextView>
+
+                        <EditText
+                            android:id="@+id/signupConfirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:textSize="14dp"></EditText>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/layoutPreSignupStep"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        tools:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/tvPreSignupHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:text="@string/label_pre_signup"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/labelDark"
+                            android:textSize="18dp"
+                            android:textStyle="bold"></TextView>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tvSignupErrorMessage"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/label_email"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/wooError"
+                        android:textSize="12dp"
+                        tools:visibility="gone"
+                        tools:ignore="RtlCompat"></TextView>
+
+                    <com.pilates.app.controls.RoundButton
+                        android:id="@+id/rbSignupContinue"
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="15dp"
+                        android:clickable="true"
+                        app:buttonBg="@drawable/button_bg_green"
+                        app:textColoring="@color/wooLabelGreen"
+                        app:textIsBold="true"
+                        app:textLabel="@string/btn_continue">
+
+                    </com.pilates.app.controls.RoundButton>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </FrameLayout>
+
+        <com.pilates.app.controls.SlidingPanel
+            android:id="@+id/panelHelp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:helpMode="true"
+            tools:visibility="gone"></com.pilates.app.controls.SlidingPanel>
+    </FrameLayout>
+
+    <com.pilates.app.controls.DateTimeSelector
+        android:id="@+id/dtsLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+
+</FrameLayout>

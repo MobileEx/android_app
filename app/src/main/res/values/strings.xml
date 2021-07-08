@@ -1,0 +1,12 @@
+<resources>
+    <string name="label_date_pick">Pick date</string>
+    <string name="label_time_pick">Pick time</string>
+    <string name="label_pick_year">Year</string>
+    <string name="label_month">Month</string>
+    <string name="label_day">Day</string>
+    <string name="btn_select">SELECT</string>
+    <string name="label_hour">Hour</string>
+    <string name="label_minute">Minute</string>
+    <string name="alertnumber">1</string>
+    <string name="almost_time">NEXT CLASS: 15 mins</string>
+</resources>

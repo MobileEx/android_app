@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvCertificatesHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/label_documents"
+        android:textAlignment="textStart"
+        android:textColor="@color/labelDark"
+        android:textSize="18dp"
+        android:textStyle="bold"></TextView>
+
+    <LinearLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvUploadInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/label_upload_docs"
+            android:textAlignment="textStart"
+            android:textColor="@color/labelDark"
+            android:textSize="16dp"></TextView>
+
+        <com.pilates.app.controls.RoundButton
+            android:id="@+id/rbAddDocument"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:clickable="true"
+            app:buttonBg="@drawable/button_bg_gray"
+            app:buttonIcon="@drawable/icon_new_doc"
+            app:hasIcon="true"
+            app:textColoring="@color/wooPurple"
+            app:textIsBold="true"
+            app:textLabel="Add Document">
+
+        </com.pilates.app.controls.RoundButton>
+
+        <ProgressBar
+            android:id="@+id/pbCertLoader"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:indeterminateTint="@color/labelDark" />
+
+        <LinearLayout
+            android:id="@+id/layoutDocItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"></LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutAddingNew"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvDocumentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/label_doc_name"
+            android:textAlignment="textStart"
+            android:textColor="@color/labelDark"
+            android:textSize="12dp"></TextView>
+
+        <EditText
+            android:id="@+id/documentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="Name"
+            android:inputType="text"
+            android:textSize="14dp"></EditText>
+
+        <TextView
+            android:id="@+id/tvDocumentDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/label_doc_date"
+            android:textAlignment="textStart"
+            android:textColor="@color/labelDark"
+            android:textSize="12dp"></TextView>
+
+        <EditText
+            android:id="@+id/documentDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            android:hint="Date"
+            android:inputType="none"
+            android:textSize="14dp"></EditText>
+
+        <TextView
+            android:id="@+id/tvFileInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="File name: doc.txt\nFile size: 536 KB"
+            android:textAlignment="textEnd"
+            android:textColor="@color/labelDark"
+            android:textSize="12dp"></TextView>
+
+        <com.pilates.app.controls.RoundButton
+            android:id="@+id/rbSaveDocument"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="0dp"
+            android:clickable="true"
+            app:buttonBg="@drawable/button_bg_purple"
+            app:textColoring="@android:color/white"
+            app:textIsBold="true"
+            app:textLabel="Save Document" />
+
+
+        <com.pilates.app.controls.RoundButton
+            android:id="@+id/rbCancelDocument"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            app:buttonBg="@drawable/button_bg_gray"
+            app:textColoring="@color/labelDark"
+            app:textIsBold="true"
+            app:textLabel="Cancel" />
+    </LinearLayout>
+
+</LinearLayout>

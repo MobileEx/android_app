@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="my_studio">My Studio</string>
+    <string name="next_class_in">NEXT CLASS:</string>
+    <string name="label_add_class">Add Class</string>
+    <string name="label_add_class_descr">Create a new class listing</string>
+    <string name="label_stats">Stats</string>
+    <string name="label_stats_descr">How is your studio performing?</string>
+    <string name="label_logout">LOGOUT</string>
+    <string name="label_dashboard_title_trainer">Current Balance</string>
+    <string name="label_dashboard_title_trainee">Next Class</string>
+    <string name="label_dashboard_greeting">Hello again!</string>
+    <string name="label_dashboard_classes">Your Classes</string>
+    <string name="label_time_remaining">Your class is about to start in:</string>
+    <string name="btn_cancel_join">CANCEL JOIN</string>
+    <string name="btn_cancel_class">CANCEL CLASS</string>
+
+    <string name="label_browse">Browse</string>
+    <string name="label_browse_descr">Explore Classes &amp; Trainers</string>
+
+    <string name="label_find">Find</string>
+    <string name="label_find_descr">Find something specific</string>
+    <string name="label_starting_class">Starting class...</string>
+</resources>

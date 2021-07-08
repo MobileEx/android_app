@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IconButton">
+        <attr name="iconInactive" format="integer" />
+        <attr name="iconActive" format="integer" />
+        <attr name="labelText" format="string" />
+        <attr name="dataTag" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TestButton">
+        <attr name="tapToTestLabel" format="string" />
+        <attr name="testingLabel" format="string" />
+        <attr name="successLabel" format="string" />
+        <attr name="failLabel" format="string" />
+        <attr name="iconDefault" format="integer" />
+        <attr name="iconSuccess" format="integer" />
+        <attr name="iconError" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundButton">
+        <attr name="buttonBg" format="integer" />
+        <attr name="textLabel" format="string" />
+        <attr name="textColoring" format="color" />
+        <attr name="textIsBold" format="boolean" />
+        <attr name="selectionValue" format="string" />
+        <attr name="buttonTiny" format="boolean" />
+        <attr name="hasIcon" format="boolean" />
+        <attr name="buttonIcon" format="integer" />
+        <attr name="specificSetup" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundButtonGroup">
+        <attr name="multiSelect" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="DocRow">
+        <attr name="isSimple" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SlidingPanel">
+        <attr name="helpMode" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="HugeButton">
+        <attr name="hugeBG" format="integer" />
+        <attr name="hugeTitle" format="string" />
+        <attr name="hugeDescription" format="string" />
+        <attr name="hugeTextColoring" format="color" />
+        <attr name="hugeIcon" format="integer" />
+        <attr name="hugeIconFront" format="integer" />
+        <attr name="hugeTitleColor" format="color" />
+        <attr name="hugeAlt" format="boolean" />
+        <attr name="hugeSlim" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="AlertRow">
+        <attr name="alertTitle" format="string" />
+        <attr name="alertDescription" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="GallerySetup">
+        <attr name="classMode" format="boolean" />
+        <attr name="showcaseMode" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TimeBox">
+        <attr name="tbSmaller" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ClassList">
+        <attr name="clMode" format="string" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,92 @@
+<resources>
+    <string name="facebook_app_id">2802161649852618</string>
+    <string name="fb_login_protocol_scheme">fb2802161649852618</string>
+
+    <string name="app_name">WOOBODY</string>
+    <string name="Trainee">Trainee</string>
+    <string name="Trainer">Trainer</string>
+    <string name="thanks_text">Thanks for downloading Woobody!</string>
+    <string name="btn_get_started">LET&quot;S GET STARTED</string>
+    <string name="label_instructor">Are you a licensed pilates instructor?</string>
+    <string name="btn_register_trainer">CREATE INSTRUCTOR ACCOUNT</string>
+    <string name="btn_learn_more">LEARN MORE</string>
+    <string name="label_terms">Terms &amp; Conditions | Privacy</string>
+    <string name="label_new_user">Are you new to Woobody?</string>
+    <string name="label_have_acc">Already have an account?</string>
+    <string name="btn_login">LOG IN</string>
+    <string name="btn_sign_up">SIGN UP</string>
+    <string name="label_login_title">Enter your account details</string>
+    <string name="label_skip">Skip</string>
+
+    <string name="screen_login">Login</string>
+    <string name="label_email">Email Address</string>
+    <string name="label_password">Password</string>
+    <string name="label_confirm_password">Confirm Password</string>
+    <string name="label_forgot_pass">Forgot Password?</string>
+    <string name="btn_continue">CONTINUE</string>
+    <string name="label_social">Or Sign Up with your social media account:</string>
+    <string name="label_info">Why am I seeing this?</string>
+    <string name="label_skip_profile">Skip and go to your dashboard</string>
+    <string name="label_exp">What year did you start instructing Pilates?</string>
+    <string name="label_year">Year You Started</string>
+    <string name="label_name">Your Name</string>
+    <string name="label_pre_signup">New to Woobody? Create account manually or join with your social media account.</string>
+    <string name="label_about_me">About Me</string>
+    <string name="label_profile_pic">Profile Picture</string>
+    <string name="btn_remove">REMOVE</string>
+    <string name="btn_add">ADD</string>
+    <string name="label_gallery">Gallery Images</string>
+
+    <string name="label_durations">Which class durations are you most likely to run?</string>
+    <string name="label_tod">What is the best time of day for you to do your Pilates?</string>
+    <string name="label_times_per_week">How many times per week do you expect to run classes?</string>
+
+    <string name="label_signup_title">Create your account</string>
+
+    <string name="label_account_details">Enter your account details</string>
+    <string name="label_country">Country of Residence</string>
+    <string name="label_phone">Phone</string>
+    <string name="label_post_code">Postcode</string>
+    <string name="label_address">Address</string>
+
+    <string name="label_basic_complete">Welcome!\nAccount created.</string>
+    <string name="label_basic_thanks">Thank you. You\'ve successfully created your Woobody account.</string>
+    <string name="label_basic_start">Now let\'s setup your trainer profile, so you can start running classes...</string>
+
+    <string name="label_documents">Certifications</string>
+    <string name="label_doc_name">Document Name</string>
+    <string name="label_doc_date">Document Date</string>
+
+    <string name="label_upload_docs">Please upload any relevant professional certificates, diplomas, awards or license documents that you hold. </string>
+
+    <string name="label_pilates_types">Pilates Types</string>
+    <string name="label_pilates_text">Please add any types of Pilates that you teach or specialise in.</string>
+    <string name="label_pilates_search_text">Tap to add a name to your list</string>
+    <string name="hint_about_me">Tap to add a brief description about yourself as and any useful infromation about the Pilates services you offer that will appear on your trainer profile. \n\nThis can be up to 1000 characters long.</string>
+
+    <string name="label_complete">Success!\nThank you.</string>
+    <string name="label_complete_text">We’ll review your application as soon as possible and you’ll receive a response within 48 hours.</string>
+    <string name="label_confirmation">Confirmation</string>
+    <string name="label_confirm_text">Please confirm your account registration and declare that all information is true to the best of your knowledge.</string>
+
+    <string name="label_help_signup">We need to collect information about your experience as a Pilates trainer so we can review your application as fast as we can.</string>
+    <string name="label_help_signup_trainee">We need to collect information about your preferences in order to provide the best experience in finding a class.</string>
+
+
+    <string name="label_exp_level">What is your experience level?</string>
+    <string name="label_times_per_week_trainee">How many times per week do you wish to do Pilates?</string>
+    <string name="label_goals">What are your goals?</string>
+    <string name="label_trainee_instructor">Did a Woobody Pilates instructor invite you?</string>
+    <string name="label_trainee_setup">Now let\'s find the best class for you...</string>
+    <string name="label_discount">Did your Instructor give you an invitation discount code?</string>
+    <string name="label_code">Your invitation code</string>
+    <string name="label_instructor_name">Your instructor\'s name</string>
+    <string name="label_select_trainer">Select your trainer</string>
+    <string-array name="spinner_role_items">
+
+        <item>Trainer</item>
+        <item>Trainee</item>
+    </string-array>
+
+
+</resources>

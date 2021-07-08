@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".RegistrationActivity">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Registration"
+            android:textAlignment="center"
+            android:textSize="40dp"
+            android:textStyle="bold"></TextView>
+
+
+        <EditText
+            android:id="@+id/singUpUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Username"
+            android:inputType="textEmailAddress"
+            android:textSize="14dp"></EditText>
+
+        <EditText
+            android:id="@+id/singUpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="14dp"></EditText>
+
+
+        <EditText
+            android:id="@+id/signUpPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="14dp"></EditText>
+
+
+        <Spinner
+            android:id="@+id/signUpRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:entries="@array/spinner_role_items">
+
+        </Spinner>
+
+
+
+
+<!--        <RadioGroup-->
+<!--            android:id="@+id/role_radio_group"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="10dp">-->
+
+<!--            &lt;!&ndash;            <RelativeLayout&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_height="wrap_content">&ndash;&gt;-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/radioButtonTrainer"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:checked="true"-->
+<!--                android:text="@string/Trainer" />-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/radioButtonTrainee"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toRightOf="@+id/radioButtonTrainer"-->
+<!--                android:text="@string/Trainee" />-->
+
+<!--            &lt;!&ndash;            </RelativeLayout>&ndash;&gt;-->
+<!--        </RadioGroup>-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Have an account?"
+                android:textSize="14dp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign in"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textSize="14dp"
+                android:textStyle="bold"></TextView>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>

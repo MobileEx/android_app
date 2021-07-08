@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_cancel_add">Cancel &amp; Return to Dashboard</string>
+    <string name="label_spec">Specification</string>
+    <string name="label_timing">Timing</string>
+    <string name="label_details">Details</string>
+    <string name="label_class_add_type">How do you want to get started?</string>
+    <string name="label_class_spec">Class Specification</string>
+    <string name="label_class_name">Name</string>
+    <string name="label_class_duration">Duration</string>
+    <string name="label_class_exp_level">Experience Level</string>
+    <string name="label_class_stream_type">Interaction Type</string>
+    <string name="label_class_price">Price</string>
+    <string name="label_class_max_participants">Max Number Of Participants</string>
+
+    <string name="label_class_timing">Class Timing</string>
+    <string name="label_class_start_date">Date of the first class</string>
+    <string name="label_class_start_time">Start Time</string>
+    <string name="label_class_multiple_classes">Single Class or Program of Classes?</string>
+    <string name="label_class_number_of_classes">Number of Weekly Classes in Program</string>
+
+    <string name="label_class_details">Class Details</string>
+    <string name="label_class_images">Images</string>
+    <string name="label_class_description">Descriptions</string>
+    <string name="label_class_pilates_types">Pilates Types</string>
+    <string name="label_class_main_purposes">Main Purposes</string>
+    <string name="label_class_requirements">Any participant requirements</string>
+    <string name="btn_class_images_done">DONE</string>
+    <string name="btn_edit">EDIT</string>
+    <string name="btn_submit">SUBMIT</string>
+    <string name="label_class_preview">CLASS PREVIEW</string>
+    <string name="label_class_added">Congratulations!\nYour class is active.</string>
+    <string name="label_class_added_subtitle">Trainees are now able to view and join your class. You can manage your class in My Studio via your dashboard.</string>
+    <string name="btn_go_dashboard">GO TO DASHBOARD</string>
+    <string name="label_pick_copy_class">Pick the class you want to copy</string>
+    <string name="label_copying_class">Cloning class...</string>
+    <string name="btn_add_to_studio">ADD TO MY STUDIO</string>
+</resources>

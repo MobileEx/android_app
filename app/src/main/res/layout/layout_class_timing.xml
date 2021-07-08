@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvClassTiming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/label_class_timing"
+            android:textAlignment="textStart"
+            android:textColor="@color/labelDark"
+            android:textSize="16dp"
+            android:textStyle="bold"></TextView>
+
+        <ProgressBar
+            android:id="@+id/pbTimingLoader"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:id="@+id/layoutFields"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvClassStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/label_class_start_date"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelDark"
+                android:textSize="12dp"></TextView>
+
+            <EditText
+                android:id="@+id/classStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:hint="Select a date"
+                android:inputType="none"
+                android:textSize="14dp"></EditText>
+
+            <TextView
+                android:id="@+id/tvClassStartTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/label_class_start_time"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelDark"
+                android:textSize="12dp"></TextView>
+
+            <Spinner
+                android:id="@+id/spnClassStartTime"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvMultipleClasses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/label_class_multiple_classes"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelDark"
+                android:textSize="12dp"></TextView>
+
+
+            <com.pilates.app.controls.RoundButtonGroup
+                android:id="@+id/rbgSelectMultipleClasses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="left"
+                android:orientation="horizontal" >
+
+                <com.pilates.app.controls.RoundButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:buttonBg="@drawable/button_bg_gray"
+                    app:selectionValue="false"
+                    app:textColoring="@color/wooDarkGray"
+                    app:textIsBold="true"
+                    app:textLabel="SINGLE" />
+
+
+                <com.pilates.app.controls.RoundButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:buttonBg="@drawable/button_bg_gray"
+                    app:selectionValue="true"
+                    app:textColoring="@color/wooDarkGray"
+                    app:textIsBold="true"
+                    app:textLabel="PROGRAM"
+                    tools:visibility="visible" />
+            </com.pilates.app.controls.RoundButtonGroup>
+
+            <TextView
+                android:id="@+id/tvClassNumberOfClasses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_class_number_of_classes"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelDark"
+                android:textSize="12dp"></TextView>
+
+            <EditText
+                android:id="@+id/classNumberOfClasses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Enter number of classes"
+                android:inputType="number"
+                android:textSize="14dp"></EditText>
+
+            <TextView
+                android:id="@+id/tvClassesInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/wooPurple"
+                android:textSize="14dp"></TextView>
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelError"
+                android:textSize="12dp"></TextView>
+
+            <com.pilates.app.controls.RoundButton
+                android:id="@+id/rbClassTimingContinue"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="15dp"
+                android:clickable="true"
+                app:buttonBg="@drawable/button_bg_green"
+                app:textColoring="@color/wooLabelGreen"
+                app:textIsBold="true"
+                app:textLabel="@string/btn_continue">
+
+            </com.pilates.app.controls.RoundButton>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

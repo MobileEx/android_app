@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/layoutSelectTrainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvTraineeInstructorHeader2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/label_select_trainer"
+            android:textAlignment="textStart"
+            android:textColor="@color/labelDark"
+            android:textSize="18dp"
+            android:textStyle="bold"></TextView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+
+            <LinearLayout
+                android:id="@+id/layoutFoundTrainers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <com.pilates.app.controls.RoundButton
+            android:id="@+id/rbCancelSelect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:clickable="true"
+            app:buttonBg="@drawable/button_bg_gray"
+            app:textColoring="@color/labelDark"
+            app:textIsBold="true"
+            app:textLabel="Cancel select" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutTraineeInstructorStep1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvTraineeInstructorHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/label_trainee_instructor"
+            android:textAlignment="textStart"
+            android:textColor="@color/labelDark"
+            android:textSize="18dp"
+            android:textStyle="bold"></TextView>
+
+        <com.pilates.app.controls.RoundButtonGroup
+            android:id="@+id/rbgSelectTraineeHasInstructor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <com.pilates.app.controls.RoundButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                app:buttonBg="@drawable/button_bg_gray"
+                app:selectionValue="true"
+                app:textColoring="@color/wooDarkGray"
+                app:textIsBold="true"
+                app:textLabel="YES" />
+
+
+            <com.pilates.app.controls.RoundButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                app:buttonBg="@drawable/button_bg_gray"
+                app:selectionValue="false"
+                app:textColoring="@color/wooDarkGray"
+                app:textIsBold="true"
+                app:textLabel="NO"
+                tools:visibility="visible" />
+
+        </com.pilates.app.controls.RoundButtonGroup>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutTraineeInstructorStep2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvTraineeInstructorHeaderStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/label_discount"
+            android:textAlignment="textStart"
+            android:textColor="@color/labelDark"
+            android:textSize="18dp"
+            android:textStyle="bold"></TextView>
+
+        <com.pilates.app.controls.RoundButtonGroup
+            android:id="@+id/rbgSelectTraineeHasDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <com.pilates.app.controls.RoundButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                app:buttonBg="@drawable/button_bg_gray"
+                app:selectionValue="true"
+                app:textColoring="@color/wooDarkGray"
+                app:textIsBold="true"
+                app:textLabel="YES" />
+
+
+            <com.pilates.app.controls.RoundButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                app:buttonBg="@drawable/button_bg_gray"
+                app:selectionValue="false"
+                app:textColoring="@color/wooDarkGray"
+                app:textIsBold="true"
+                app:textLabel="NO"
+                tools:visibility="visible" />
+
+        </com.pilates.app.controls.RoundButtonGroup>
+
+        <LinearLayout
+            android:id="@+id/layoutSelectedTrainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDiscountCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            tools:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvLabelDiscountCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/label_code"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/labelDark"
+                    android:textSize="16dp"
+                    android:textStyle="bold"></TextView>
+
+                <TextView
+                    android:id="@+id/tvCodeStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/labelDark"
+                    android:textSize="14dp"
+                    android:textStyle="bold"></TextView>
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/discountCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Code"
+                android:inputType="text"
+                android:textSize="14dp"></EditText>
+
+            <com.pilates.app.controls.RoundButton
+                android:id="@+id/rbCheckCode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                app:buttonBg="@drawable/button_bg_cyan"
+                app:textColoring="@color/wooLabelCyan"
+                app:textIsBold="true"
+                app:textLabel="Check Code" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTrainerCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            tools:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvLabelTrainerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_instructor_name"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelDark"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+
+            <EditText
+                android:id="@+id/trainerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Name"
+                android:inputType="text"
+                android:textSize="14dp"></EditText>
+
+            <com.pilates.app.controls.RoundButton
+                android:id="@+id/rbFindTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:buttonBg="@drawable/button_bg_cyan"
+                app:textColoring="@color/wooLabelCyan"
+                app:textIsBold="true"
+                app:textLabel="Find Trainer">
+
+            </com.pilates.app.controls.RoundButton>
+
+        </LinearLayout>
+
+        <com.pilates.app.controls.RoundButton
+            android:id="@+id/rbDiscountBack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp"
+            android:clickable="true"
+            app:buttonBg="@drawable/button_bg_gray"
+            app:textColoring="@color/labelDark"
+            app:textIsBold="true"
+            app:textLabel="I don't have a trainer" />
+    </LinearLayout>
+</LinearLayout>

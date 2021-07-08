@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvClassSpec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/label_class_spec"
+            android:textAlignment="textStart"
+            android:textColor="@color/labelDark"
+            android:textSize="16dp"
+            android:textStyle="bold"></TextView>
+
+        <ProgressBar
+            android:id="@+id/pbSpecLoader"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:id="@+id/layoutFields"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvClassName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/label_class_name"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelDark"
+                android:textSize="12dp"></TextView>
+
+            <EditText
+                android:id="@+id/className"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Enter your Class Name"
+                android:inputType="text"
+                android:textSize="14dp"></EditText>
+
+            <TextView
+                android:id="@+id/tvClassDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/label_class_duration"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelDark"
+                android:textSize="12dp"></TextView>
+
+            <Spinner
+                android:id="@+id/spnClassDuration"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvClassExpLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/label_class_exp_level"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelDark"
+                android:textSize="12dp"></TextView>
+
+
+            <com.pilates.app.controls.RoundButtonGroup
+                android:id="@+id/rbgSelectExperienceLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="left"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/tvClassStreamingType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_class_stream_type"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelDark"
+                android:textSize="12dp"></TextView>
+
+            <com.pilates.app.controls.RoundButtonGroup
+                android:id="@+id/rbgSelectStreamingType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="left"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/tvClassPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_class_price"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelDark"
+                android:textSize="12dp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="2dp"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/icon_euro" />
+
+                <EditText
+                    android:id="@+id/classPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:hint="Enter Class Price"
+                    android:inputType="numberDecimal"
+                    android:textSize="14dp"></EditText>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvClassMaxParticipants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/label_class_max_participants"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelDark"
+                android:textSize="12dp"></TextView>
+
+            <EditText
+                android:id="@+id/classMaxParticipants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Enter Max Number of Participants"
+                android:inputType="number"
+                android:textSize="14dp"></EditText>
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/labelError"
+                android:textSize="12dp"></TextView>
+
+            <com.pilates.app.controls.RoundButton
+                android:id="@+id/rbClassSpecContinue"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="15dp"
+                android:clickable="true"
+                app:buttonBg="@drawable/button_bg_green"
+                app:textColoring="@color/wooLabelGreen"
+                app:textIsBold="true"
+                app:textLabel="@string/btn_continue">
+
+            </com.pilates.app.controls.RoundButton>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

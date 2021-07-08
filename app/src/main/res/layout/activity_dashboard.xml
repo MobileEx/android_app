@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wooFafa"
+    tools:context=".DashboardActivity">
+
+    <RelativeLayout
+        android:id="@+id/frameHeader"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/imgBrowser"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/icon_browser" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="37dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgIconNotification"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/icon_notification" />
+
+            <ImageView
+                android:id="@+id/imgIconMessages"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                app:srcCompat="@drawable/icon_message" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/alertsign"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="18dp"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:background="@drawable/icon_alert_number"
+            android:visibility="visible">
+            <TextView
+                android:id="@+id/alertnumber"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="@string/alertnumber"
+                android:textColor="@android:color/white">
+            </TextView>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <com.pilates.app.controls.AlertRow
+        android:id="@+id/arApproved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginRight="30dp"
+        app:alertDescription="We’ll let you know as soon as it is!"
+        app:alertTitle="Not Yet Approved"
+        tools:visibility="gone">
+
+    </com.pilates.app.controls.AlertRow>
+
+    <LinearLayout
+        android:id="@+id/layoutDashboardInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvDashboardInfoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_dashboard_title_trainer"
+            android:textColor="@android:color/white"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/tvDashboardInfoValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_dashboard_title_trainer"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutDashboardInfo"
+        android:layout_marginTop="140dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/frameHowToStartClass_bg"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/bg_dashboard_blue_green"
+                android:orientation="horizontal"
+                android:layout_marginBottom="-30dp"
+                android:visibility="gone">
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/frameMidSection"
+                android:layout_width="match_parent"
+                android:layout_below="@id/frameHowToStartClass_bg"
+                android:layout_marginTop="0dp"
+                android:layout_height="280dp"
+                android:background="@drawable/bg_dashboard_green">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical">
+                    <com.pilates.app.controls.RoundButton
+                        android:id="@+id/rbMessages"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="0dp"
+                        android:clickable="true"
+                        app:buttonBg="@drawable/button_bg_green_faded"
+                        app:buttonIcon="@drawable/icon_message_dark"
+                        app:hasIcon="true"
+                        app:specificSetup="dashboard_green"
+                        app:textColoring="@color/wooLabelGreen"
+                        app:textIsBold="true"
+                        app:textLabel="Messages">
+
+                        <LinearLayout
+                            android:id="@id/alertsign"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="38dp"
+                            android:background="@drawable/icon_alert_number"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@id/alertnumber"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:gravity="center"
+                                android:text="@string/alertnumber"
+                                android:textColor="@android:color/white"></TextView>
+                        </LinearLayout>
+                    </com.pilates.app.controls.RoundButton>
+
+                    <com.pilates.app.controls.RoundButton
+                        android:id="@+id/rbPayments"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="0dp"
+                        android:layout_below="@id/rbMessages"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="0dp"
+                        android:clickable="true"
+                        app:buttonBg="@drawable/button_bg_green_faded"
+                        app:buttonIcon="@drawable/icon_payment"
+                        app:hasIcon="true"
+                        app:specificSetup="dashboard_green"
+                        app:textColoring="@color/wooLabelGreen"
+                        app:textIsBold="true"
+                        app:textLabel="Payments"></com.pilates.app.controls.RoundButton>
+
+                    <com.pilates.app.controls.RoundButton
+                        android:id="@+id/rbProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="0dp"
+                        android:layout_below="@id/rbPayments"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="0dp"
+                        android:clickable="true"
+                        app:buttonBg="@drawable/button_bg_green_faded"
+                        app:buttonIcon="@drawable/icon_profile"
+                        app:hasIcon="true"
+                        app:specificSetup="dashboard_green"
+                        app:textColoring="@color/wooLabelGreen"
+                        app:textIsBold="true"
+                        app:textLabel="Your Trainer Profile"></com.pilates.app.controls.RoundButton>
+
+                    <com.pilates.app.controls.RoundButton
+                        android:id="@+id/rbAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="0dp"
+                        android:layout_below="@id/rbProfile"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="0dp"
+                        android:clickable="true"
+                        app:buttonBg="@drawable/button_bg_green_faded"
+                        app:buttonIcon="@drawable/icon_account"
+                        app:hasIcon="true"
+                        app:specificSetup="dashboard_green"
+                        app:textColoring="@color/wooLabelGreen"
+                        app:textIsBold="true"
+                        app:textLabel="Account Details"></com.pilates.app.controls.RoundButton>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/frameMidSection"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical">
+                <com.pilates.app.controls.RoundButton
+                    android:id="@+id/rbHelpCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_above="@id/rbContact"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    app:specificSetup="dashboard_grey"
+                    app:textColoring="@color/wooProBlue"
+                    app:textIsBold="false"
+                    app:textLabel="Help Center"></com.pilates.app.controls.RoundButton>
+
+                <com.pilates.app.controls.RoundButton
+                    android:id="@+id/rbContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/rbAbout"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    app:specificSetup="dashboard_grey"
+                    app:textColoring="@color/wooProBlue"
+                    app:textIsBold="false"
+                    app:textLabel="Contact"></com.pilates.app.controls.RoundButton>
+
+
+                <com.pilates.app.controls.RoundButton
+                    android:id="@+id/rbAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_above="@id/tvLogout"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true"
+                    app:specificSetup="dashboard_grey"
+                    app:textColoring="@color/wooProBlue"
+                    app:textIsBold="false"
+                    app:textLabel="About"></com.pilates.app.controls.RoundButton>
+
+                <TextView
+                    android:id="@+id/tvLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/label_logout"
+                    android:textColor="@color/wooError" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/frameHowToStartClass_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/layoutDashboardInfo"
+        android:orientation="vertical"
+        android:background="@drawable/button_bg_cyan"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            app:srcCompat="@drawable/icon_tab_how_to_class"></ImageView>
+        <TextView
+            android:id="@+id/txtHowToStartClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="55dp"
+            android:textSize="18dp"
+            android:text="How To Start A Class"></TextView>
+        <TextView
+            android:id="@+id/txtHowToStartClassContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtHowToStartClass"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="10dp"
+            android:textSize="12dp"
+            android:text="Key information about how and what to do start adding your classes to Woobody so that you can be giving great classes in no time!"></TextView>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/txtHowToStartClassContent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/icon_arrow_front_white"></ImageView>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/panel_white_round"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/pbDashboardInfo"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            tools:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/frameMyStudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/icon_studio" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvMyStudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_studio"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tvNextClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next_class_in"
+                    android:textColor="@color/wooWeirdPurple"
+                    android:textSize="10dp"
+                    android:visibility="visible"/>
+                <TextView
+                    android:id="@+id/tvAlmost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/almost_time"
+                    android:textColor="@color/wooError"
+                    android:textSize="10dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgIconOpenStudio"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="right"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/icon_arrow_front" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.pilates.app.controls.RoundButton
+                android:id="@+id/rbStartNextClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="0dp"
+                android:clickable="true"
+                app:buttonBg="@drawable/button_bg_error"
+                app:buttonIcon="@drawable/icon_tab_next_class"
+                app:hasIcon="true"
+                app:specificSetup="dashboard_white"
+                app:textColoring="@android:color/white"
+                app:textIsBold="true"
+                app:textLabel="Start Your Next Class"></com.pilates.app.controls.RoundButton>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/layoutTrainerDashButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.pilates.app.controls.HugeButton
+                android:id="@+id/hbAddClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:hugeAlt="true"
+                app:hugeBG="@drawable/huge_button_bg_weird_purple"
+                app:hugeDescription="@string/label_add_class_descr"
+                app:hugeIcon="@drawable/icon_tab_add"
+                app:hugeTextColoring="@android:color/white"
+                app:hugeTitle="@string/label_add_class">
+
+            </com.pilates.app.controls.HugeButton>
+
+            <com.pilates.app.controls.HugeButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                app:hugeAlt="true"
+                app:hugeBG="@drawable/huge_button_bg_grey"
+                app:hugeDescription="@string/label_stats_descr"
+                app:hugeIcon="@drawable/icon_stats"
+                app:hugeTextColoring="@color/colorPrimaryDark"
+                app:hugeTitle="@string/label_stats">
+
+            </com.pilates.app.controls.HugeButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutTraineeDashButtons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <com.pilates.app.controls.HugeButton
+                android:id="@+id/hbBrowseClasses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:hugeAlt="true"
+                app:hugeBG="@drawable/huge_button_bg_grey"
+                app:hugeDescription="@string/label_browse_descr"
+                app:hugeIcon="@drawable/icon_browse"
+                app:hugeTextColoring="@color/colorPrimaryDark"
+                app:hugeTitle="@string/label_browse">
+
+            </com.pilates.app.controls.HugeButton>
+
+            <com.pilates.app.controls.HugeButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                app:hugeAlt="true"
+                app:hugeBG="@drawable/huge_button_bg_grey"
+                app:hugeDescription="@string/label_find_descr"
+                app:hugeIcon="@drawable/icon_wizard"
+                app:hugeTextColoring="@color/colorPrimaryDark"
+                app:hugeTitle="@string/label_find">
+
+            </com.pilates.app.controls.HugeButton>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/frameStudioClasses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        tools:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgIconBackStudio"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            app:srcCompat="@drawable/icon_arrow_back_darker" />
+
+        <ImageView
+            android:id="@+id/imgBrowser2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/icon_browser" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgTitleIcon"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                app:srcCompat="@drawable/icon_studio" />
+
+            <TextView
+                android:id="@+id/tvStudioTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="@string/my_studio"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <com.pilates.app.controls.RoundButtonGroup
+            android:id="@+id/rbgSelectStudioList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+            <com.pilates.app.controls.RoundButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                app:buttonBg="@drawable/button_bg_gray"
+                app:selectionValue="own"
+                app:specificSetup="button_underscore"
+                app:textColoring="@color/wooDarkGray"
+                app:textIsBold="true"
+                app:textLabel="Scheduled" />
+
+
+            <com.pilates.app.controls.RoundButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                app:buttonBg="@drawable/button_bg_gray"
+                app:selectionValue="history"
+                app:specificSetup="button_underscore"
+                app:textColoring="@color/wooDarkGray"
+                app:textIsBold="true"
+                app:textLabel="History"
+                tools:visibility="visible" />
+        </com.pilates.app.controls.RoundButtonGroup>
+
+        <com.pilates.app.controls.ClassList
+            android:id="@+id/clStudioOwn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="130dp"
+            android:layout_marginBottom="50dp"
+            app:clMode="own">
+
+        </com.pilates.app.controls.ClassList>
+
+
+        <com.pilates.app.controls.ClassList
+            android:id="@+id/clStudioHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="130dp"
+            android:layout_marginBottom="50dp"
+            app:clMode="history">
+
+        </com.pilates.app.controls.ClassList>
+    </FrameLayout>
+
+    <com.pilates.app.controls.screens.ClassInfoPanel
+        android:id="@+id/classInfoPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone">
+
+    </com.pilates.app.controls.screens.ClassInfoPanel>
+
+</RelativeLayout>

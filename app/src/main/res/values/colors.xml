@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#613ff7</color>
+    <color name="colorAccent">#141414</color>
+    <color name="labelDark">#4d5963</color>
+    <color name="labelFaded">#869ca9</color>
+    <color name="labelError">#fb5184</color>
+    <color name="wooGreen">#5fe8c6</color>
+    <color name="wooPurple">#7053f6</color>
+    <color name="wooCyan">#00d1ff</color>
+    <color name="wooCyanFaded">#4ddfff</color>
+    <color name="wooLabelGreen">#266858</color>
+    <color name="wooLabelCyan">#005d73</color>
+    <color name="wooGray">#f8fafc</color>
+    <color name="wooDarkGray">#ecf1f8</color>
+    <color name="wooError">#fb5184</color>
+    <color name="wooErrorFaded">#fc86a9</color>
+    <color name="wooFadedGrey">#cad4db</color>
+    <color name="wooWeirdPurple">#926bfa</color>
+    <color name="wooFafa">#fafafa</color>
+    <color name="wooGreenFaded">#7fedd1</color>
+    <color name="wooProBlue">#889eac</color>
+    <color name="wooYellow">#fbdd51</color>
+    <color name="wooYellowFaded">#fcdf86</color>
+    <color name="labelYellow">#7d7028</color>
+    <color name="wooGrayFaded">#f3f3f2</color>
+    <color name="wooLabelRed">#7d2842</color>
+</resources>
